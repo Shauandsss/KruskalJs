@@ -1,0 +1,19 @@
+.Lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all ease 0.2s;
+}
+
+.TextLine{
+    border: 1px solid white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.LinesSolved {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all ease 0.2s;
+}

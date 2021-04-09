@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    color: white;
+    font-family: 'Roboto';
+    font-size: 50px;
+}
+
+.Second-Col {
+    margin-left: 70%;
+    margin-top: 6%;
+    
+}
+
+.List {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+
+.List div, h1{
+    padding:20px;
+}
+
+.Node1,
+.Node2 {
+    box-shadow: 0 0 2pt 2pt white;
+    border-radius: 50%;
+}
+
+.Line {
+    position: absolute;
+    border: 1px solid white;
+    color: white;
+}
+
+.Btn {
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #131210;
+}
+
+$num-elements: 7;
+$angle: 360/$num-elements;
+$radius: 600px;
+$circle-size: 80px;
+$rot: 0;
+
+.MainNodes {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: $radius;
+    height: $radius;
+    border: 0px solid #ddd;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.MainNodes div {
+    width: $circle-size;
+    height: $circle-size;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin: -($circle-size/2);
+}
+
+.MainNodes h1 {
+    color: #131210;
+    padding:0px;
+    margin-top: 15%;
+}
+
+@for $i from 1 through $num-elements {
+    .MainNodes h1:nth-child(#{$i}) {
+        transform: rotate(0) translate(0) rotate(0)
+    }
+}
+
+@for $i from 1 through $num-elements {
+    .MainNodes div:nth-child(#{$i}) {
+        transform: rotate(-$rot * 1deg) translate($radius/2) rotate(-$rot * -1deg)
+    }
+    $rot: $rot + $angle;
+}
