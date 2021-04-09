@@ -131,6 +131,7 @@ export default () => {
     }
 
     return (
+        
         <div className="container">
             <div className="row">
                 <div className="First-col">
@@ -161,5 +162,5 @@ export default () => {
             </div>
         </div>
     )
-    
+    {/* Going to create variable nodes */}
 }
