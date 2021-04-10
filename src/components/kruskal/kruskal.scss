@@ -5,10 +5,26 @@
     font-size: 50px;
 }
 
-.Second-Col {
-    margin-left: 70%;
-    margin-top: 6%;
+.First-Col {
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    width: 30%;
     
+}
+
+.Second-Col {
+    width: 30%;
+    float: right;
+    margin-top: 5%;
+}
+
+.Input-Board {
+    width: 100%;
+}
+
+.Input--Edges {
+    width: 100px;
 }
 
 .List {

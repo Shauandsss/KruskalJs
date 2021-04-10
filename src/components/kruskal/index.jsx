@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react';
 import './kruskal.scss'
 import Lines from '../Lines'
 import Code from '../Code'
+import InputEdges from '../Input--Edges'
+import InputNodes from '../Input--Nodes'
 
 export default () => {
     const _ = require("underscore");
@@ -134,12 +136,29 @@ export default () => {
         
         <div className="container">
             <div className="row">
-                <div className="First-col">
-                    <div ClassName="Main--Graph">
-                        <div className="Btns">
-                            <button id="BtnSolve" className="Btn">Resolver</button>
-                            <button id="BtnBack" className="Btn">Retornar</button>
-                        </div>
+                <div className="Btns">
+                    <button id="BtnSolve" className="Btn">Resolver</button>
+                    <button id="BtnBack" className="Btn">Retornar</button>
+                </div>
+                <div className="First-Col">
+                    <div className="Input-Board">
+                        {nodes.length > 0 && nodes.map((val)=>{
+                                    return  <InputNodes className="Input--Nodes" key={val[0]} id={val[0]} value={val[0]}/>
+                        })}
+                        {edges.length > 0 && edges.map((val)=>{
+                                    return  <InputEdges className="Input--Edges" key={val[0]} id={val[0]} valueEdge1={val[0]} valueEdge2={val[1]} valueEdge3={val[2]}/>
+                        })}
+                    </div>
+                </div>
+
+        
+
+                <div className="Second-Col">
+                    <div ClassName="Main--Code">
+                        <Code></Code>
+                    </div>
+                </div>
+                <div ClassName="Main--Graph">
                         <div className="MainNodes">
                             {nodes.length > 0 && nodes.map((val)=>{
                                 return  <div key={val[0]} id={val[0]}>
@@ -151,16 +170,8 @@ export default () => {
                         {edgesSolved !== undefined
                             && <Lines data={positions} data2={edgesSolved} cN={"LinesSolved"} visibility={edgesVisSol}/>}  
                         </div>
-                        
                     </div>
-                </div>
-                <div className="Second-Col">
-                    <div ClassName="Main--Code">
-                        <Code></Code>
-                    </div>
-                </div>
             </div>
         </div>
     )
-    {/* Going to create variable nodes */}
 }

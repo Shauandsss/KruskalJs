@@ -34,7 +34,7 @@ export default (props) => {
                     <text className="LightBlue">          floresta</text>.<text className="Yellow">push</text><text className="Purple">(</text><text className="LightBlue">_</text>.<text className="Yellow">union</text><text className="LightBlue">(t1</text><text className="Yellow">[</text><text className="Green">2</text><text className="Yellow">]</text>, <text className="LightBlue"> t2</text><text className="Yellow">[</text><text className="Green">0</text><text className="Yellow">]</text><text className="LightBlue">)</text><text className="Purple">)</text>;<br></br>
                     <text className="LightBlue">          mst</text>.<text className="Yellow">push</text><text className="Purple">(</text><text className="LightBlue">vertice</text><text className="Purple">)</text>;<br></br>
                     <text className="Yellow">       &#125;</text><br></br>
-                    <text className="LightBlue">   &#125;</text><br></br>
+                    <text className="LightBlue">    &#125;</text><br></br>
                     <text className="Purple">&#125;</text><br></br>
                 </code>
             </pre>
