@@ -12,3 +12,5 @@ Needing some updgrades, probably next upgrade (not sorted):
 - Make nodes and edges inputable;
 - Black/Light Theme;
 - Responsive page;
+
+Link: https://Shauandsss.github.io/KruskalJs
