@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/KruskalJs/static/css/main.b2f68953.chunk.css",
-    "main.js": "/KruskalJs/static/js/main.145b124a.chunk.js",
-    "main.js.map": "/KruskalJs/static/js/main.145b124a.chunk.js.map",
+    "main.css": "/KruskalJs/static/css/main.5c76f4bf.chunk.css",
+    "main.js": "/KruskalJs/static/js/main.35e5a2fa.chunk.js",
+    "main.js.map": "/KruskalJs/static/js/main.35e5a2fa.chunk.js.map",
     "runtime-main.js": "/KruskalJs/static/js/runtime-main.9fd772c1.js",
     "runtime-main.js.map": "/KruskalJs/static/js/runtime-main.9fd772c1.js.map",
     "static/js/2.67a18760.chunk.js": "/KruskalJs/static/js/2.67a18760.chunk.js",
     "static/js/2.67a18760.chunk.js.map": "/KruskalJs/static/js/2.67a18760.chunk.js.map",
     "index.html": "/KruskalJs/index.html",
-    "static/css/main.b2f68953.chunk.css.map": "/KruskalJs/static/css/main.b2f68953.chunk.css.map",
+    "static/css/main.5c76f4bf.chunk.css.map": "/KruskalJs/static/css/main.5c76f4bf.chunk.css.map",
     "static/js/2.67a18760.chunk.js.LICENSE.txt": "/KruskalJs/static/js/2.67a18760.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9fd772c1.js",
     "static/js/2.67a18760.chunk.js",
-    "static/css/main.b2f68953.chunk.css",
-    "static/js/main.145b124a.chunk.js"
+    "static/css/main.5c76f4bf.chunk.css",
+    "static/js/main.35e5a2fa.chunk.js"
   ]
 }
