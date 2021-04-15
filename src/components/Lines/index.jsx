@@ -7,11 +7,15 @@ import './Lines.scss'
 export default (props) => {
     const [positions, setPositions] = useState([[]])
     const [edges, setEdges] = useState([[]])
+    const [minusX, setMinusX] = useState(680)
+    const [minusY, setMinusY] = useState(200)
     
     useEffect (() => {
         const loadAll = async () => {
             setPositions(props.data)
             setEdges(props.data2)
+            setMinusX(900)
+            setMinusY(550)
         }
         loadAll()
     }, [positions])
@@ -39,21 +43,23 @@ export default (props) => {
         return (xy1 + xy2)/2 
     }
     return (
-            <svg className={props.cN} visibility={props.visibility}>
+            <svg viewBox="670 200 500 500" className={props.cN} visibility={props.visibility}>
+                
                     {positions[0][1] > 0 && positions[0][1] !== undefined && edges.map((val)=> {
                         return <>
-                                <line  className="Line" 
-                                    key={(val[0])+"_"+(val[1])} 
-                                    id={(val[0])+"_"+(val[1])} 
-                                    x1={-620 + getElementPosit(val[0], 2)} 
-                                    y1={-160 + getElementPosit(val[0], 1)} 
-                                    x2={-620 + getElementPosit(val[1], 2)} 
-                                    y2={-160 + getElementPosit(val[1], 1)} 
-                                    stroke="White">
-                                </line>  
-                                <text className="TextLine" x={-620 + getEdgesPosit(val[0], val[1], 2)} y={-160 + getEdgesPosit(val[0], val[1], 1)} fill="white">{val[2]}</text>    
-                               </>
+                        <line  className="Line" 
+                            key={(val[0])+"_"+(val[1])} 
+                            id={(val[0])+"_"+(val[1])} 
+                            x1={0 + getElementPosit(val[0], 2)} 
+                            y1={0 + getElementPosit(val[0], 1)} 
+                            x2={0 + getElementPosit(val[1], 2)} 
+                            y2={0 + getElementPosit(val[1], 1)} 
+                            stroke="White">
+                        </line>  
+                        <text className="TextLine" x={getEdgesPosit(val[0], val[1], 2)} y={getEdgesPosit(val[0], val[1], 1)} fill="white">{val[2]}</text>    
+                       </>
                     })}
+             
             </svg>
 
     )

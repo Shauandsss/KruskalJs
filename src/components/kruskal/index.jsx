@@ -9,6 +9,7 @@ import Code from '../Code'
 import InputEdges from '../Input--Edges'
 import InputNodes from '../Input--Nodes'
 
+
 export default () => {
     const _ = require("underscore");
     const [edges, setEdges] = useState([[]])
@@ -87,6 +88,7 @@ export default () => {
             return
         }
         var rect = element.getBoundingClientRect();
+        
         return rect.y
     }
 
@@ -133,7 +135,6 @@ export default () => {
     }
 
     return (
-        
         <div className="container">
             <div className="row">
                 <div className="Btns">
@@ -142,11 +143,14 @@ export default () => {
                 </div>
                 <div className="First-Col">
                     <div className="Input-Board">
+                        <h2>Nós</h2> 
                         {nodes.length > 0 && nodes.map((val)=>{
                                     return  <InputNodes className="Input--Nodes" key={val[0]} id={val[0]} value={val[0]}/>
                         })}
+                        <h2>Vértices</h2>
+                        <h4>Nó_1 | Nó_2 | Peso</h4>                        
                         {edges.length > 0 && edges.map((val)=>{
-                                    return  <InputEdges className="Input--Edges" key={val[0]} id={val[0]} valueEdge1={val[0]} valueEdge2={val[1]} valueEdge3={val[2]}/>
+                                    return  <InputEdges className="Input--Edges" key={(val[0])+"_"+(val[1])} id={(val[0])+"_"+(val[1])} valueEdge1={val[0]} valueEdge2={val[1]} valueEdge3={val[2]}/>
                         })}
                     </div>
                 </div>
@@ -158,19 +162,18 @@ export default () => {
                         <Code></Code>
                     </div>
                 </div>
-                <div ClassName="Main--Graph">
-                        <div className="MainNodes">
-                            {nodes.length > 0 && nodes.map((val)=>{
-                                return  <div key={val[0]} id={val[0]}>
-                                            <h1>{val[0]}</h1>
-                                        </div>
-                            })}
-                        {positions[0][1] !== undefined   
-                            && <Lines data={positions} data2={edges} cN={"Lines"} visibility={edgesVis}/>} 
-                        {edgesSolved !== undefined
-                            && <Lines data={positions} data2={edgesSolved} cN={"LinesSolved"} visibility={edgesVisSol}/>}  
-                        </div>
-                    </div>
+                <div className="MainNodes">
+                    {nodes.length > 0 && nodes.map((val)=>{
+                        return  <div key={val[0]} id={val[0]}>
+                                    <h1>{val[0]}</h1>
+                                </div>
+                    })}
+                {positions[0][1] !== undefined   
+                    && <Lines data={positions} data2={edges} cN={"Lines"} visibility={edgesVis}/>} 
+                {edgesSolved !== undefined
+                    && <Lines data={positions} data2={edgesSolved} cN={"LinesSolved"} visibility={edgesVisSol}/>}  
+                </div>
+
             </div>
         </div>
     )

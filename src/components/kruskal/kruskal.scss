@@ -23,6 +23,18 @@
     width: 100%;
 }
 
+.Input-Board h2 {
+    font-size: 30px;
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+
+.Input-Board h4 {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
 .Input--Edges {
     width: 100px;
 }
@@ -56,11 +68,16 @@
     border-radius: 10px;
     font-size: 15px;
     color: #131210;
+    transition: 0.5s;
+}
+
+.Btn:hover{
+    background-color: rgba(255,255,255,0.5);
 }
 
 $num-elements: 7;
 $angle: 360/$num-elements;
-$radius: 600px;
+$radius: 100vh/2;
 $circle-size: 80px;
 $rot: 0;
 
@@ -86,6 +103,11 @@ $rot: 0;
     left: 50%;
     top: 50%;
     margin: -($circle-size/2);
+}
+
+.MainNodes div:hover{
+    background-color: rgba(255,255,255, 0.5);
+    transition: 0.3s;
 }
 
 .MainNodes h1 {
