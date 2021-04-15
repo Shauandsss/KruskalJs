@@ -173,7 +173,7 @@ export default () => {
                 {edgesSolved !== undefined
                     && <Lines data={positions} data2={edgesSolved} cN={"LinesSolved"} visibility={edgesVisSol}/>}  
                 </div>
-
+                <h1 className="Advice">não é completamente responsivo (trabalhando nisso), resolução ideal (1920x1080p)</h1>
             </div>
         </div>
     )
