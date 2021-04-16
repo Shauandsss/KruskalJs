@@ -6,11 +6,12 @@ A React native app, for solve Kruskal.
 
 
 
-Needing some updgrades, probably next upgrade (not sorted): 
+Needing some updgrades, upgrades (not sorted): 
 
 - Explain how a Kruskal works in a better way;
 - Make nodes and edges inputable;
 - Black/Light Theme;
 - Responsive page;
+- Use tabs on code part, to show another languages codes, like Py, C, Java...;
 
 Link: https://Shauandsss.github.io/KruskalJs
