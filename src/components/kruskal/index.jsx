@@ -19,12 +19,13 @@ export default () => {
     const [loading, setLoading] = useState()
     const [edgesVis, setEdgesVis] = useState("visible")
     const [edgesVisSol, setEdgesVisSol] = useState("hidden")
+    const [v, setv] = useState([""]);
 
     var el = document.getElementById('BtnSolve');
     let x = el === null ? null : el.addEventListener("click", hidde);
     var el2 = document.getElementById('BtnBack');
     let x2 = el2 === null ? null : el2.addEventListener("click", show);
-    
+
     function show(){
         setEdgesVis("visible")
         setEdgesVisSol("hidden")
@@ -34,20 +35,18 @@ export default () => {
         setEdgesVisSol("visible")
     }
 
-    useEffect (() => {
 
+    useEffect (() => {
         const loadAll = async () => {
             setEdges([
                 ["A", "B", 7], ["A", "D", 5],
-                ["B", "C", 8], ["B", "D", 9], ["B", "E", 7],
-                ["C", "E", 5],
+                ["B", "C", 8], ["B", "D", 9], 
+                ["B", "E", 7], ["C", "E", 5],
                 ["D", "E", 15], ["D", "F", 6],
                 ["E", "F", 8], ["E", "G", 9],
                 ["F", "G", 11]
             ])
             setNodes(["A", "B", "C", "D", "E", "F", "G"])
-
-
         }         
         loadAll();
     }, [])
@@ -71,7 +70,9 @@ export default () => {
             ["E", getPositionY(document.getElementById("E")), getPositionX(document.getElementById("E"))], 
             ["F", getPositionY(document.getElementById("F")), getPositionX(document.getElementById("F"))],
             ["G", getPositionY(document.getElementById("G")), getPositionX(document.getElementById("G"))]])
+            console.log("Seting positions")
         }
+       
         loadAll();
         setLoading(true)
       },[edges])
@@ -91,7 +92,6 @@ export default () => {
         
         return rect.y
     }
-
     function executeKruskal(nos, vertices) {
         if((nos !== undefined) && (edges !== undefined)){
             console.clear()
@@ -134,6 +134,13 @@ export default () => {
         }
     }
 
+    function quandoClicar(valorGerado){
+        console.log(valorGerado)
+        setEdges(valorGerado)
+        console.log(edges)
+        setLoading(true)
+    }
+
     return (
         <div className="container">
             <div className="row">
@@ -145,13 +152,17 @@ export default () => {
                     <div className="Input-Board">
                         <h2>Nós</h2> 
                         {nodes.length > 0 && nodes.map((val)=>{
-                                    return  <InputNodes className="Input--Nodes" key={val[0]} id={val[0]} value={val[0]}/>
+                                    return  <InputNodes  className="Input--Nodes" key={val[0]} id={val[0]} value={val[0]}/>
                         })}
                         <h2>Vértices</h2>
-                        <h4>Nó_1 | Nó_2 | Peso</h4>                        
-                        {edges.length > 0 && edges.map((val)=>{
-                                    return  <InputEdges className="Input--Edges" key={(val[0])+"_"+(val[1])} id={(val[0])+"_"+(val[1])} valueEdge1={val[0]} valueEdge2={val[1]} valueEdge3={val[2]}/>
-                        })}
+                        <h4>Nó_1 | Nó_2 | Peso</h4> 
+
+                        <div id="Main--Input--Edges" className="Main--Input--Edges">                
+                            {edges.length > 0 && edges.map((val)=>{
+                                        return  <InputEdges idMain="Main--Edges" onClicar={quandoClicar} className="Input--Edges" key={(val[0])+"_"+(val[1])} id={(val[0])+"_"+(val[1])} valueEdge1={val[0]} valueEdge2={val[1]} valueEdge3={val[2]}/>
+                            })}
+                            <InputEdges idMain="Input--Edges--News" onClicar={quandoClicar} className="Input--Edges"></InputEdges>
+                        </div>
                     </div>
                 </div>
 
