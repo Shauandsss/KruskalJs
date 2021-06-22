@@ -1,20 +1,13 @@
 {
-  "files": {
-    "main.css": "/KruskalJs/static/css/main.96172814.chunk.css",
-    "main.js": "/KruskalJs/static/js/main.a14bf19d.chunk.js",
-    "main.js.map": "/KruskalJs/static/js/main.a14bf19d.chunk.js.map",
-    "runtime-main.js": "/KruskalJs/static/js/runtime-main.9fd772c1.js",
-    "runtime-main.js.map": "/KruskalJs/static/js/runtime-main.9fd772c1.js.map",
-    "static/js/2.67a18760.chunk.js": "/KruskalJs/static/js/2.67a18760.chunk.js",
-    "static/js/2.67a18760.chunk.js.map": "/KruskalJs/static/js/2.67a18760.chunk.js.map",
-    "index.html": "/KruskalJs/index.html",
-    "static/css/main.96172814.chunk.css.map": "/KruskalJs/static/css/main.96172814.chunk.css.map",
-    "static/js/2.67a18760.chunk.js.LICENSE.txt": "/KruskalJs/static/js/2.67a18760.chunk.js.LICENSE.txt"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.9fd772c1.js",
-    "static/js/2.67a18760.chunk.js",
-    "static/css/main.96172814.chunk.css",
-    "static/js/main.a14bf19d.chunk.js"
-  ]
+  "main.css": "/KruskalJs/static/css/main.08e43385.chunk.css",
+  "main.js": "/KruskalJs/static/js/main.148d2236.chunk.js",
+  "main.js.map": "/KruskalJs/static/js/main.148d2236.chunk.js.map",
+  "runtime~main.js": "/KruskalJs/static/js/runtime~main.76873393.js",
+  "runtime~main.js.map": "/KruskalJs/static/js/runtime~main.76873393.js.map",
+  "static/js/2.e9c57fd1.chunk.js": "/KruskalJs/static/js/2.e9c57fd1.chunk.js",
+  "static/js/2.e9c57fd1.chunk.js.map": "/KruskalJs/static/js/2.e9c57fd1.chunk.js.map",
+  "index.html": "/KruskalJs/index.html",
+  "precache-manifest.0332a0fe594368efe8306a459d066e9d.js": "/KruskalJs/precache-manifest.0332a0fe594368efe8306a459d066e9d.js",
+  "service-worker.js": "/KruskalJs/service-worker.js",
+  "static/css/main.08e43385.chunk.css.map": "/KruskalJs/static/css/main.08e43385.chunk.css.map"
 }
